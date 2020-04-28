@@ -1,0 +1,27 @@
+{
+	"name": "@nativeweb/build",
+	"version": "0.1.0",
+	"repository": "nativew/build",
+	"author": "Antoine Boulanger (https://github.com/antoineboulanger)",
+	"license": "ISC",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"scripts": {
+		"format": "prettier --write 'src/*'",
+		"build": "npm run format && terser src/index.js -o dist/index.js"
+	},
+	"dependencies": {
+		"@rollup/plugin-node-resolve": "*",
+		"rollup": "*",
+		"rollup-plugin-livereload": "*",
+		"rollup-plugin-serve": "*",
+		"rollup-plugin-terser": "*"
+	},
+	"devDependencies": {
+		"prettier": "*",
+		"terser": "*"
+	},
+	"files": [
+		"dist"
+	]
+}
