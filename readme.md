@@ -40,7 +40,7 @@ npm install @nativeweb/build
 [rollup-plugin-terser]: https://github.com/TrySound/rollup-plugin-terser
 
 ## 🤝 License 
-[ISC](https://github.com/nativew/nativeweb/blob/master/license)
+[ISC](https://github.com/nativew/build/blob/master/license)
 
 <p>
 <br>

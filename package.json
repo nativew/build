@@ -1,6 +1,7 @@
 {
 	"name": "@nativeweb/build",
 	"version": "0.1.0",
+	"description": "🧱 A Rollup configuration for Native Web.",
 	"repository": "nativew/build",
 	"author": "Antoine Boulanger (https://github.com/antoineboulanger)",
 	"license": "ISC",
