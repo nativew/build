@@ -1,7 +1,7 @@
-import resolve from '@rollup/plugin-node-resolve';
-import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
-import { terser } from 'rollup-plugin-terser';
+const resolve = require('@rollup/plugin-node-resolve');
+const serve = require('rollup-plugin-serve');
+const livereload = require('rollup-plugin-livereload');
+const { terser } = require('rollup-plugin-terser');
 
 const isDev = process.env.ROLLUP_WATCH;
 
@@ -29,4 +29,4 @@ const plugins = [
 	!isDev && terser()
 ];
 
-export { options, plugins, isDev };
+module.exports = { options, plugins, isDev };
