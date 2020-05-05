@@ -1,12 +1,11 @@
 {
 	"name": "@nativeweb/build",
 	"version": "0.2.0",
-	"description": "🧱 A Rollup configuration for Native Web.",
+	"description": "🧱 Rollup configuration for Native Web.",
 	"repository": "nativew/build",
 	"author": "Antoine Boulanger (https://github.com/antoineboulanger)",
 	"license": "ISC",
 	"main": "dist/index.js",
-	"module": "dist/index.js",
 	"scripts": {
 		"format": "prettier --write 'src/*'",
 		"build": "npm run format && terser src/index.js -o dist/index.js"

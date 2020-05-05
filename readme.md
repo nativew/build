@@ -1,5 +1,7 @@
 # Build 🧱
-A Rollup configuration for [Native Web](https://github.com/nativew/nativeweb).
+Rollup configuration for [Native Web](https://github.com/nativew/nativeweb).
+
+🚧 **Work in progress**
 
 ## ✨ Features
 - **Serve**. Access your website on localhost.
