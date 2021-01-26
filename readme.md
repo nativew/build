@@ -30,8 +30,6 @@ npm init nativeweb
 npm install @nativeweb/build
 ```
 
-<br>
-
 `build.config.js`
 
 ```js
