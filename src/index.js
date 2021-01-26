@@ -39,6 +39,7 @@ const build = async (options = {}, serveOptions = {}) => {
 					plugins: [
 						babel({
 							config: {
+								sourceMaps: isWatch && 'inline',
 								plugins: [
 									[
 										'@babel/plugin-proposal-decorators',
