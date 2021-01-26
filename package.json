@@ -1,6 +1,6 @@
 {
 	"name": "@nativeweb/build",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "🧱 Build tool with esbuild for Native Web.",
 	"repository": "nativew/build",
 	"author": "Antoine Boulanger (https://github.com/antoineboulanger)",
