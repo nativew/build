@@ -1,52 +1,92 @@
 # Build 🧱
-Rollup configuration for [Native Web](https://github.com/nativew/nativeweb).
 
-🚧 **Work in progress**
+Build tool with [esbuild](https://github.com/evanw/esbuild) for [Native Web](https://github.com/nativew/nativeweb).
 
-## ✨ Features
-- **Serve**. Access your website on localhost.
-- **Reload**. Refresh your browser automatically on save.
-- **Bundle**. Include your npm dependencies in your bundle.
-- **Minify**. Optimize your bundle without compiling to ES5.
-
-## 🚀 Start
-### New project
-```zsh
-# Create a new project
-npm init nativeweb
-
-# And run it 👟
-npm start
-```
-### Existing project
-```zsh
-# Add to an existing project
-npm install @nativeweb/build
-
-# And import it in your rollup.config.js
-```
-
-## 🧳 Dependencies
-| Package | Description | Size |
-| ------- | ----------- | ---- |
-| [@rollup/plugin-node-resolve] | Bundle npm dependencies. | 1mB |
-| [rollup] | The bundler. | 3mB |
-| [rollup-plugin-livereload] | Reload the browser on save. | 1mB |
-| [rollup-plugin-serve] | Serve on localhost. | 0mB |
-| [rollup-plugin-terser] | Minify ES bundle. | 3mB |
-
-[@rollup/plugin-node-resolve]: https://github.com/rollup/plugins/tree/master/packages/node-resolve
-[rollup]: https://github.com/rollup/rollup
-[rollup-plugin-livereload]: https://github.com/thgh/rollup-plugin-livereload
-[rollup-plugin-serve]: https://github.com/thgh/rollup-plugin-serve
-[rollup-plugin-terser]: https://github.com/TrySound/rollup-plugin-terser
-
-## 🤝 License 
-[ISC](https://github.com/nativew/build/blob/master/license)
-
-<p>
 <br>
-    <a href="https://github.com/nativew/nativeweb">
-        <img src="https://raw.githubusercontent.com/nativew/nativeweb/53d4fe591d5992c81b3faeb656fd1aea7aabb413/logo-square.svg?sanitize=true" alt="Native Web" width="50px">
-    </a>
-</p>
+
+### Instant serve
+
+### Live reload
+
+### Fast bundle
+
+### Optimized build
+
+### Future syntax
+
+<br>
+
+### One command to [start](https://github.com/nativew/start)
+
+```zsh
+npm init nativeweb
+```
+
+<br>
+
+### Or add to your existing project
+
+```zsh
+npm install @nativeweb/build
+```
+
+`build.config.js`
+
+```js
+import build from '@nativeweb/build';
+
+build({
+    // Customize esbuild options here.
+    plugins: [
+        // Default plugins won't be overridden.
+    ]
+});
+```
+
+`package.json`
+
+```json
+{
+    "type": "module",
+    "scripts": {
+        "start": "node build.config.js -w",
+        "build": "node build.config.js"
+    }
+}
+```
+
+<br>
+
+### Includes
+
+[esbuild](https://github.com/evanw/esbuild) &nbsp; → &nbsp; Extremely fast bundler and minifier.
+
+[PostCSS](https://github.com/postcss/postcss) &nbsp; → &nbsp; Transforms styles to the latest CSS specification.
+
+[Babel](https://github.com/babel/babel) &nbsp; → &nbsp; Transforms scripts to the latest JS specification.
+
+<br>
+
+### Details
+
+[esbuild-plugin-pipe](https://github.com/nativew/esbuild-plugin-pipe) &nbsp; → &nbsp; Pipe esbuild plugins output.
+
+[esbuild-plugin-babel](https://github.com/nativew/esbuild-plugin-babel) &nbsp; → &nbsp; Babel plugin for esbuild.
+
+[esbuild-plugin-postcss-literal](https://github.com/nativew/esbuild-plugin-postcss-literal) &nbsp; → &nbsp; PostCSS tagged template literals plugin for esbuild.
+
+[postcss-nesting](https://github.com/jonathantneal/postcss-nesting) &nbsp; → &nbsp; Nest style rules, following the CSS specification.
+
+[postcss-custom-media](https://github.com/postcss/postcss-custom-media) &nbsp; → &nbsp; Custom Media Queries, following the CSS specification.
+
+[chokidar](https://github.com/paulmillr/chokidar) &nbsp; → &nbsp; Minimal and efficient file watching library.
+
+[live-server](https://github.com/tapio/live-server) &nbsp; → &nbsp; Simple development server with live reload.
+
+<br><br>
+
+<a href="https://github.com/nativew/nativeweb">
+    <img src="https://raw.githubusercontent.com/nativew/nativeweb/1e9405c629e3a6491bb59df726044eb3823967bb/logo-square_nativeweb.svg" alt="Native Web" width="80px">
+</a>
+
+<br>

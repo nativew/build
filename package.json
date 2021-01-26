@@ -1,27 +1,41 @@
 {
 	"name": "@nativeweb/build",
 	"version": "0.2.0",
-	"description": "🧱 Rollup configuration for Native Web.",
+	"description": "🧱 Build tool with esbuild for Native Web.",
 	"repository": "nativew/build",
 	"author": "Antoine Boulanger (https://github.com/antoineboulanger)",
 	"license": "ISC",
-	"main": "dist/index.js",
+	"exports": "./src/index.js",
+	"main": "src/index.js",
+	"type": "module",
 	"scripts": {
-		"format": "prettier --write 'src/*'",
-		"build": "npm run format && terser src/index.js -o dist/index.js"
+		"format": "prettier --write --ignore-unknown '**/*'"
 	},
 	"dependencies": {
-		"@rollup/plugin-node-resolve": "*",
-		"rollup": "*",
-		"rollup-plugin-livereload": "*",
-		"rollup-plugin-serve": "*",
-		"rollup-plugin-terser": "*"
+		"chokidar": "^3.5.1",
+		"esbuild": "^0.8.34",
+		"esbuild-plugin-babel": "^0.1.2",
+		"esbuild-plugin-pipe": "^0.1.0",
+		"esbuild-plugin-postcss-literal": "^0.1.2",
+		"live-server": "^1.2.1",
+		"postcss-custom-media": "^8.0.0",
+		"postcss-nesting": "^7.0.1"
 	},
 	"devDependencies": {
-		"prettier": "*",
-		"terser": "*"
+		"prettier": "^2.2.1"
 	},
 	"files": [
-		"dist"
+		"src"
+	],
+	"keywords": [
+		"esbuild",
+		"serve",
+		"live reload",
+		"bundle",
+		"build",
+		"minify",
+		"postcss",
+		"babel",
+		"web components"
 	]
 }
