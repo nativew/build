@@ -1,3 +1,5 @@
+<div></div>
+
 # Build 🧱
 
 Build tool with [esbuild](https://github.com/evanw/esbuild) for [Native Web](https://github.com/nativew/nativeweb).
@@ -65,9 +67,13 @@ build({
 
 [Babel](https://github.com/babel/babel) &nbsp; → &nbsp; Transforms scripts to the latest JS specification.
 
+[Serve](https://github.com/nativew/serve) &nbsp; → &nbsp; Ultralight http server with live reload.
+
 <br>
 
 ### Details
+
+[esbuild-serve](https://github.com/nativew/esbuild-serve) &nbsp; → &nbsp; Serve with live reload for esbuild.
 
 [esbuild-plugin-pipe](https://github.com/nativew/esbuild-plugin-pipe) &nbsp; → &nbsp; Pipe esbuild plugins output.
 
@@ -79,14 +85,12 @@ build({
 
 [postcss-custom-media](https://github.com/postcss/postcss-custom-media) &nbsp; → &nbsp; Custom Media Queries, following the CSS specification.
 
-[chokidar](https://github.com/paulmillr/chokidar) &nbsp; → &nbsp; Minimal and efficient file watching library.
-
-[live-server](https://github.com/tapio/live-server) &nbsp; → &nbsp; Simple development server with live reload.
-
 <br><br>
 
-<a href="https://github.com/nativew/nativeweb">
-    <img src="https://raw.githubusercontent.com/nativew/nativeweb/1e9405c629e3a6491bb59df726044eb3823967bb/logo-square_nativeweb.svg" alt="Native Web" width="80px">
-</a>
+<p>
+    <a href="https://github.com/nativew/nativeweb">
+        <img src="https://raw.githubusercontent.com/nativew/nativeweb/1e9405c629e3a6491bb59df726044eb3823967bb/logo-square_nativeweb.svg" alt="Native Web" width="80px">
+    </a>
+</p>
 
-<br>
+<div></div>
