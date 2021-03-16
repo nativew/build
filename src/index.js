@@ -1,4 +1,5 @@
 import esbuildServe, { isWatch } from 'esbuild-serve';
+import svg from 'esbuild-plugin-svg';
 import pipe from 'esbuild-plugin-pipe';
 import babel from 'esbuild-plugin-babel';
 import postcssLiteral from 'esbuild-plugin-postcss-literal';
@@ -21,6 +22,11 @@ const build = (options = {}, serveOptions = {}) => {
 			minify: isBuild,
 			...options,
 			plugins: [
+				...plugins,
+				svg({
+					customElement: true,
+					minify: isBuild
+				}),
 				pipe({
 					plugins: [
 						babel({
@@ -42,8 +48,7 @@ const build = (options = {}, serveOptions = {}) => {
 							}
 						})
 					]
-				}),
-				...plugins
+				})
 			]
 		},
 		serveOptions
