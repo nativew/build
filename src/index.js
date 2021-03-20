@@ -8,8 +8,9 @@ import postcssCustomMedia from 'postcss-custom-media';
 
 export const isBuild = !isWatch;
 
-const build = (options = {}, serveOptions = {}) => {
+const build = (options = {}, advancedOptions = {}) => {
 	const { plugins = [] } = options;
+	const { serve = {}, babelPlugins = [], postcssPlugins = [] } = advancedOptions;
 
 	esbuildServe(
 		{
@@ -25,7 +26,19 @@ const build = (options = {}, serveOptions = {}) => {
 				...plugins,
 				svg({
 					customElement: true,
-					minify: isBuild
+					minify: isBuild,
+					minifyOptions: {
+						plugins: [
+							{
+								name: 'removeViewBox',
+								active: false
+							},
+							{
+								name: 'removeDimensions',
+								active: true
+							}
+						]
+					}
 				}),
 				pipe({
 					plugins: [
@@ -37,21 +50,26 @@ const build = (options = {}, serveOptions = {}) => {
 										'@babel/plugin-proposal-decorators',
 										{ decoratorsBeforeExport: true }
 									],
-									'@babel/plugin-proposal-class-properties'
+									'@babel/plugin-proposal-class-properties',
+									...babelPlugins
 								]
 							}
 						}),
 						postcssLiteral({
 							minify: isBuild,
 							config: {
-								plugins: [postcssNesting(), postcssCustomMedia()]
+								plugins: [
+									postcssNesting(),
+									postcssCustomMedia(),
+									...postcssPlugins
+								]
 							}
 						})
 					]
 				})
 			]
 		},
-		serveOptions
+		serve
 	);
 };
 

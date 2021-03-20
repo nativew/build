@@ -59,6 +59,27 @@ build({
 
 <br>
 
+### Advanced options
+
+```js
+import build from '@nativeweb/build';
+
+build(
+    {
+        // esbuild options
+    },
+    {
+        serve: {
+            // serve options
+        },
+        babelPlugins: [],
+        postcssPlugins: []
+    }
+);
+```
+
+<br>
+
 ### Includes
 
 [esbuild](https://github.com/evanw/esbuild) &nbsp; → &nbsp; Extremely fast bundler and minifier.
