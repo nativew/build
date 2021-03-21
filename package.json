@@ -18,7 +18,7 @@
 		"esbuild-plugin-pipe": "^0.2.0",
 		"esbuild-plugin-postcss-literal": "^0.2.1",
 		"esbuild-plugin-svg": "^0.1.0",
-		"esbuild-serve": "^1.0.0",
+		"esbuild-serve": "^1.0.1",
 		"postcss-custom-media": "^8.0.0",
 		"postcss-nesting": "^7.0.1"
 	},
